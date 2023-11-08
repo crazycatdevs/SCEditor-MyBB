@@ -254,8 +254,8 @@ function sceditor_is_installed()
 {
 	global $db;
 
-	$query = $db->simple_select("settinggroups", "COUNT(*) as rows", "name = 'sceditor'");
-	$rows  = $db->fetch_field($query, 'rows');
+	$query = $db->simple_select("settinggroups", "COUNT(*) as nbrows", "name = 'sceditor'");
+	$rows  = $db->fetch_field($query, 'nbrows');
 
 	return ($rows > 0);
 }
